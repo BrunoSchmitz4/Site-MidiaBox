@@ -6,17 +6,22 @@
     "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.3",
-    "@testing-library/user-event": "^13.5.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-router": "^7.18.4",
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:unit": "react-scripts test --watchAll=false src/utils src/components",
+    "test:integration": "react-scripts test --watchAll=false src/pages",
+    "test:system": "playwright test e2e/sistema",
+    "test:acceptance": "playwright test e2e/aceitacao",
+    "test:all": "npm run test:unit && npm run test:integration && npm run test:system && npm run test:acceptance",
+    "test:cov": "react-scripts test --watchAll=false --coverage"
   },
   "eslintConfig": {
     "extends": [
@@ -35,5 +40,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@testing-library/user-event": "^14.6.8"
   }
 }

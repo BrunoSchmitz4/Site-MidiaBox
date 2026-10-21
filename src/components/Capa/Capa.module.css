@@ -1,0 +1,14 @@
+.capa {
+  aspect-ratio: 3 / 4;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 700;
+  border-radius: var(--raio);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.grande {
+  width: 220px;
+}

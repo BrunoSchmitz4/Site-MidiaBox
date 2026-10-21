@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--borda);
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.link {
+  color: var(--suave);
+}
+
+.link:hover,
+.ativo {
+  color: var(--texto);
+}

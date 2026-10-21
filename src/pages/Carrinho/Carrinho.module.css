@@ -1,0 +1,18 @@
+.item {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--borda);
+}
+
+.item > div:first-child {
+  flex: 1;
+}
+
+.cupom {
+  display: flex;
+  gap: 8px;
+}
+
+.cupom input {
+  flex: 1;
+  min-width: 0;
+}

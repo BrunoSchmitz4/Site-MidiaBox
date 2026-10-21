@@ -1,13 +1,138 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --fundo: #0d1117;
+  --caixa: #161b22;
+  --borda: #30363d;
+  --texto: #e6edf3;
+  --suave: #8b949e;
+  --primaria: #38bdf8;
+  --sucesso: #4ade80;
+  --perigo: #f87171;
+  --raio: 8px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  line-height: 1.5;
+  color: var(--texto);
+  background: var(--fundo);
+}
+
+a {
+  color: var(--primaria);
+  text-decoration: none;
+}
+
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+footer {
+  text-align: center;
+  padding: 24px;
+  color: var(--suave);
+  border-top: 1px solid var(--borda);
+}
+
+button,
+.botao {
+  display: inline-block;
+  font: inherit;
+  font-weight: 600;
+  text-align: center;
+  padding: 8px 16px;
+  border: 1px solid var(--primaria);
+  border-radius: var(--raio);
+  color: var(--fundo);
+  background: var(--primaria);
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.secundario {
+  color: var(--texto);
+  background: transparent;
+  border-color: var(--borda);
+}
+
+input,
+select {
+  font: inherit;
+  padding: 8px 10px;
+  color: var(--texto);
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+}
+
+.caixa {
+  padding: 16px;
+  background: var(--caixa);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+}
+
+.caixa h1 {
+  margin-top: 0;
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 16px;
+}
+
+.grade a {
+  color: inherit;
+}
+
+.duas-colunas {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 16px;
+  align-items: start;
+}
+
+.linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.largo {
+  width: 100%;
+}
+
+.suave {
+  color: var(--suave);
+}
+
+.sucesso {
+  color: var(--sucesso);
+}
+
+.perigo {
+  color: var(--perigo);
+}
+
+@media (max-width: 700px) {
+  .duas-colunas {
+    grid-template-columns: 1fr;
+  }
+
+  .grade {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
